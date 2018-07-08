@@ -6,7 +6,7 @@ int main(int argc, char* argv[])
 	int target = 9;
 	vector<int> nums = { 2, 7, 11, 15 };
 
-	sl->twoSum(nums, target);
+	vector<int> result = sl->twoSum(nums, target);
 	system("pause");
 	return 0;
 }
