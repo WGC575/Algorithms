@@ -13,10 +13,35 @@ return [0, 1].
 
 #include <iostream>
 #include <vector>
-#include <map>
+#include <unordered_map>
 
 using namespace std;
 
+class Solution {
+	public:
+		vector<int> twoSum(vector<int>& nums, int target) {
+			vector<int> result = {};
+			unordered_map<int, int> temp = {};
+			int remain;
+			for (int i = 0; i < nums.size(); ++i) 
+			{
+				temp[nums[i]] = i;
+			}
+			for (int i = 0; i < nums.size(); ++i) {
+				remain = target - nums[i];
+				if (temp.find(remain) != temp.end() && temp[remain] != i)
+				{
+					//vector不能直接用index创建新值
+					result.push_back(i);
+					result.push_back(temp[remain]);
+					return result;
+				}
+					
+			}
+		}
+	};
+
+/*************
 class Solution {
 public:
 	vector<int> twoSum(vector<int>& nums, int target) {
@@ -40,3 +65,4 @@ public:
 		}
 	}
 };
+**********************/
