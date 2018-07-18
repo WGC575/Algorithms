@@ -23,7 +23,45 @@ struct ListNode {
 	ListNode *next;
 	ListNode(int x) : val(x), next(NULL) {}
 };
-
+class Solution {
+public:
+	ListNode * addTwoNumbers(ListNode* l1, ListNode* l2) {
+		ListNode* result = new ListNode((l1->val + l2->val) % 10);
+		ListNode* ptr = result;
+		int car = (l1->val + l2->val) / 10;
+		while (l1->next != NULL || l2->next != NULL)
+		{
+			if (l1->next != NULL && l2->next != NULL)
+			{
+				l1 = l1->next;
+				l2 = l2->next;
+				ptr->next = new ListNode((l1->val + l2->val + car) % 10);
+				ptr = ptr->next;
+				car = (l1->val + l2->val + car) / 10;
+			}
+			else if (l1->next != NULL)
+			{
+				l1 = l1->next;
+				ptr->next = new ListNode((l1->val + car) % 10);
+				ptr = ptr->next;
+				car = (l1->val + car) / 10;
+			}
+			else
+			{
+				l2 = l2->next;
+				ptr->next = new ListNode((l2->val + car) % 10);
+				ptr = ptr->next;
+				car = (l2->val + car) / 10;
+			}
+		}
+		if (car == 1)
+		{
+			ptr->next = new ListNode(1);
+		}
+		return result;
+	}
+};
+/*
 class Solution {
 public:
 	ListNode * addTwoNumbers(ListNode* l1, ListNode* l2) {
@@ -71,4 +109,4 @@ public:
 		}
 		return result;
 	}
-};
+};*/
