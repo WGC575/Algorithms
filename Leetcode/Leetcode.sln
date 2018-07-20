@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09_Palindrome_Number", "09_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13_Roman_to_Integer", "13_Roman_to_Integer\13_Roman_to_Integer.vcxproj", "{D85DFFE5-2682-4647-B4BD-C41ABD5D2E01}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "14_Longest_Common_Prefix", "14_Longest_Common_Prefix\14_Longest_Common_Prefix.vcxproj", "{B40633CD-4ADF-4B84-A7F7-EECB295A130B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{D85DFFE5-2682-4647-B4BD-C41ABD5D2E01}.Release|x64.Build.0 = Release|x64
 		{D85DFFE5-2682-4647-B4BD-C41ABD5D2E01}.Release|x86.ActiveCfg = Release|Win32
 		{D85DFFE5-2682-4647-B4BD-C41ABD5D2E01}.Release|x86.Build.0 = Release|Win32
+		{B40633CD-4ADF-4B84-A7F7-EECB295A130B}.Debug|x64.ActiveCfg = Debug|x64
+		{B40633CD-4ADF-4B84-A7F7-EECB295A130B}.Debug|x64.Build.0 = Debug|x64
+		{B40633CD-4ADF-4B84-A7F7-EECB295A130B}.Debug|x86.ActiveCfg = Debug|Win32
+		{B40633CD-4ADF-4B84-A7F7-EECB295A130B}.Debug|x86.Build.0 = Debug|Win32
+		{B40633CD-4ADF-4B84-A7F7-EECB295A130B}.Release|x64.ActiveCfg = Release|x64
+		{B40633CD-4ADF-4B84-A7F7-EECB295A130B}.Release|x64.Build.0 = Release|x64
+		{B40633CD-4ADF-4B84-A7F7-EECB295A130B}.Release|x86.ActiveCfg = Release|Win32
+		{B40633CD-4ADF-4B84-A7F7-EECB295A130B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
