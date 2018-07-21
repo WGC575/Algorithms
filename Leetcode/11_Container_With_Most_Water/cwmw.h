@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <vector> 
+#include <algorithm>
 
 using namespace std;
 
@@ -10,20 +11,25 @@ static auto _ = []() {
 	return 0;
 }();
 
-int max(int a, int b)
-{
-	return (a >= b ? a : b);
-}
-
-int area(int begin, int end, vector<int> &height)
-{
-	if ()
-		return max(area(begin + 1, end, height), area)
-}
-
 class Solution {
 public:
 	int maxArea(vector<int>& height) {
-
+		int begin = 0;
+		int len = height.size() - 1;
+		int end = len;
+		int area;
+		while (begin <= end) 
+		{
+			area =max(area, (end - begin) * min(height[begin], height[end]));
+			if (height[begin] < height[end]) 
+			{
+				begin++;
+			}
+			else 
+			{
+				end--;
+			}
+		}
+		return area;
 	}
 };
