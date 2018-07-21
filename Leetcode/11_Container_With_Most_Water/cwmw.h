@@ -10,8 +10,18 @@ static auto _ = []() {
 	return 0;
 }();
 
-class Solution 
+int max(int a, int b)
 {
+	return (a >= b ? a : b);
+}
+
+int area(int begin, int end, vector<int> &height)
+{
+	if ()
+		return max(area(begin + 1, end, height), area)
+}
+
+class Solution {
 public:
 	int maxArea(vector<int>& height) {
 
